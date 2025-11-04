@@ -32,6 +32,6 @@ btnRoll.addEventListener("click", function () {
     currnetScore += dice;
     currnet0El.textContent = currnetScore; // Change later: now is testing
   } else {
-    // switch to next player
+    // switch to next playe
   }
 });

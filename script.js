@@ -87,4 +87,20 @@ btnNew.addEventListener("click", function () {
   player0El.classList.add("player--active");
   player1El.classList.remove("player--winner");
   player1El.classList.remove("player--active");
+
+   /* 
+   Note:
+  if (activePlayer === 0) {
+    player0El.classList.remove("player--winner");
+    player0El.classList.add("player--active");
+  } else {
+    player1El.classList.remove("player--winner");
+    activePlayer = 0;
+    player0El.classList.add("player--active");
+  }
+
+  ✅ Logical is correct, but it's better to reset activePlayer = 0 directly 
+  and clear both players' classes before adding "player--active" again.
+  (More clean, less risk of wrong player staying active)
+*/
 });

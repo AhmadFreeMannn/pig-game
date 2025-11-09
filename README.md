@@ -1,10 +1,10 @@
-**🎲 Pig Game**
+# 🎲 Pig Game
 
 A simple two-player dice game built with Vanilla JavaScript.
 Each player rolls the dice and tries to reach 100 points first — but be careful!
 Rolling a 1 resets your current score, and the turn goes to the other player.
 
-**🧠 Game Rules**
+## 🧠 Game Rules
 
 Each player rolls the dice as many times as they want.
 
@@ -18,7 +18,7 @@ The first player to reach 100 points wins.
 
 The New Game button resets everything.
 
-**🧩 Features**
+## 🧩 Features
 
 Fully functional game logic (roll, hold, new game)
 
@@ -30,7 +30,7 @@ Clean event-driven design
 
 Responsive layout with CSS
 
-**🛠️ Tech Stack**
+## 🛠️ Tech Stack
 
 | Technology       | Purpose                      |
 | ---------------- | ---------------------------- |
@@ -38,7 +38,7 @@ Responsive layout with CSS
 | CSS3             | Styling and layout           |
 | JavaScript (ES6) | Game logic and interactivity |
 
-Clone this repository:
+**Clone this repository:**
 
 `git clone https://github.com/AhmadFreeMannn/Pig-Game.git`
 
@@ -46,6 +46,6 @@ Open the folder in your code editor.
 
 Run the index.html file in your browser.
 
-👨‍💻 Author
+**👨‍💻 Author**
 
-Developed with ❤️ by AhmadFreeMannn
+Developed with ❤️ by **AhmadFreeMannn**

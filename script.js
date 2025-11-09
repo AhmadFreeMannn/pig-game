@@ -13,16 +13,29 @@ const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 
 // Starting conditions
-score0El.textContent = 0;
-score1El.textContent = 0;
-diceEl.classList.add("hidden");
 
-let scores = [0, 0];
-let currnetScore = 0;
-let activePlayer = 0;
-let playing = true;
+let scores, currnetScore, activePlayer, playing;
 
-// Functions
+const init = function () {
+  // resets all variables (scores, current, activePlayer, etc.)
+  // and updates UI elements to their initial state
+  scores = [0, 0];
+  currnetScore = 0;
+  activePlayer = 0;
+  playing = true;
+
+  currnet0El.textContent = 0;
+  currnet1El.textContent = 0; // = document.getElementById("current--1");
+  score0El.textContent = scores[0];
+  score1El.textContent = scores[1]; // = document.getElementById("score--1");
+
+  diceEl.classList.add("hidden");
+  player0El.classList.remove("player--winner");
+  player0El.classList.add("player--active");
+  player1El.classList.remove("player--winner");
+  player1El.classList.remove("player--active");
+};
+init();
 
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -62,8 +75,8 @@ btnHold.addEventListener("click", function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
     // 2. Check if player's score is >= 100
-    if (scores[activePlayer] >= 20) {
-      // finish the game (* change later)
+    if (scores[activePlayer] >= 100) {
+      // finish the game
       playing = false;
       diceEl.classList.add("hidden");
       document
@@ -79,26 +92,9 @@ btnHold.addEventListener("click", function () {
   }
 });
 
-btnNew.addEventListener("click", function () {
-  // New Game button — resets all variables (scores, current, activePlayer, etc.)
-  // and updates UI elements to their initial state
-  diceEl.classList.add("hidden");
-  playing = true;
-  activePlayer = 0;
-  player0El.classList.remove("player--winner");
-  player0El.classList.add("player--active");
-  player1El.classList.remove("player--winner");
-  player1El.classList.remove("player--active");
+btnNew.addEventListener("click", init);
 
-  currnetScore = 0;
-  document.getElementById("current--0").textContent = 0;
-  document.getElementById("current--1").textContent = 0;
-
-  scores = [0, 0];
-  document.getElementById("score--0").textContent = scores[0];
-  document.getElementById("score--1").textContent = scores[1];
-
-  /* 
+/* 
    Note:
   if (activePlayer === 0) {
     player0El.classList.remove("player--winner");
@@ -113,4 +109,3 @@ btnNew.addEventListener("click", function () {
   and clear both players' classes before adding "player--active" again.
   (More clean, less risk of wrong player staying active)
 */
-});

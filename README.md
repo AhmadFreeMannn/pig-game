@@ -46,14 +46,6 @@ Open the folder in your code editor.
 
 Run the index.html file in your browser.
 
-🧹 Improvements (for future)
-
-Add score limit input (e.g., set goal manually)
-
-Add animations and dice roll sound
-
-Add player name input fields
-
 👨‍💻 Author
 
 Developed with ❤️ by AhmadFreeMannn

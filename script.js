@@ -80,7 +80,9 @@ btnHold.addEventListener("click", function () {
 });
 
 btnNew.addEventListener("click", function () {
-  // New game btn
+  // New Game button — resets all variables (scores, current, activePlayer, etc.)
+  // and updates UI elements to their initial state
+  diceEl.classList.add("hidden");
   playing = true;
   activePlayer = 0;
   player0El.classList.remove("player--winner");
@@ -88,7 +90,15 @@ btnNew.addEventListener("click", function () {
   player1El.classList.remove("player--winner");
   player1El.classList.remove("player--active");
 
-   /* 
+  currnetScore = 0;
+  document.getElementById("current--0").textContent = 0;
+  document.getElementById("current--1").textContent = 0;
+
+  scores = [0, 0];
+  document.getElementById("score--0").textContent = scores[0];
+  document.getElementById("score--1").textContent = scores[1];
+
+  /* 
    Note:
   if (activePlayer === 0) {
     player0El.classList.remove("player--winner");
